@@ -16,9 +16,5 @@ export interface BlogPost {
   likes: number;
 }
 
-export type ViewState = 'HOME' | 'LOGIN' | 'SIGNUP' | 'ADMIN' | 'POST_DETAIL' | 'TRAVEL' | 'STYLE' | 'GROWTH';
 
-export interface ViewContext {
-  view: ViewState;
-  data?: any; // To pass post ID or other data between views
-}
+export type Category = 'HOME' | 'TRAVEL' | 'STYLE' | 'GROWTH';

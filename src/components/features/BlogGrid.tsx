@@ -1,12 +1,12 @@
 import React from 'react';
 import { Sparkles, ArrowRight, Plus, Loader2 } from 'lucide-react';
-import { BlogPost, User, ViewState } from '../../types';
+import { BlogPost, User, Category } from '../../types';
 
 interface BlogGridProps {
     posts: BlogPost[];
     isDark: boolean;
     onPostClick: (id: string) => void;
-    currentView: ViewState;
+    currentView: Category;
     user: User | null;
     onWriteNew: () => void;
 }

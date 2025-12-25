@@ -4,7 +4,7 @@ import { useApp } from '../../context/AppContext';
 import NavBar from './NavBar';
 
 const MainLayout: React.FC<{ children: ReactNode }> = ({ children }) => {
-    const { isDark, user, setView, toggleTheme, logout } = useApp();
+    const { isDark, user, toggleTheme, logout } = useApp();
 
     return (
         <div className={`min-h-screen transition-colors duration-500 font-sans ${isDark ? 'bg-[#050505] text-slate-300' : 'bg-[#fff0f5] text-slate-700'}`}>
@@ -17,7 +17,6 @@ const MainLayout: React.FC<{ children: ReactNode }> = ({ children }) => {
 
             <NavBar
                 user={user}
-                onNavigate={setView}
                 isDark={isDark}
                 toggleTheme={toggleTheme}
                 onLogout={logout}
